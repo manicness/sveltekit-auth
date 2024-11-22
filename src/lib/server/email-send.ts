@@ -2,10 +2,10 @@ import nodemailer from 'nodemailer';
 import * as aws from '@aws-sdk/client-ses';
 import {
 	FROM_EMAIL,
-	AWS_ACCESS_KEY_ID,
-	AWS_SECRET_ACCESS_KEY,
-	AWS_REGION,
-	AWS_API_VERSION
+	MY_SWA_ACCESS_KEY_ID,
+	MY_SWA_SECRET_ACCESS_KEY,
+	MY_SWA_REGION,
+	MY_SWA_API_VERSION
 } from '$env/static/private';
 //import { z } from "zod";
 export default async function sendEmail(
@@ -14,16 +14,16 @@ export default async function sendEmail(
 	bodyHtml?: string,
 	bodyText?: string
 ) {
-	const hasAccessKeys = AWS_ACCESS_KEY_ID && AWS_SECRET_ACCESS_KEY;
+	const hasAccessKeys = MY_SWA_ACCESS_KEY_ID && MY_SWA_SECRET_ACCESS_KEY;
 
 	const ses = new aws.SES({
-		apiVersion: AWS_API_VERSION,
-		region: AWS_REGION,
+		apiVersion: MY_SWA_API_VERSION,
+		region: MY_SWA_REGION,
 		...(hasAccessKeys
 			? {
 					credentials: {
-						accessKeyId: AWS_ACCESS_KEY_ID || '',
-						secretAccessKey: AWS_SECRET_ACCESS_KEY || ''
+						accessKeyId: MY_SWA_ACCESS_KEY_ID || '',
+						secretAccessKey: MY_SWA_SECRET_ACCESS_KEY || ''
 					}
 				}
 			: {})
