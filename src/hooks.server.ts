@@ -56,7 +56,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 	}
 
 	const response = await resolve(event);
-	console.log('There has been an error - id #852')
 	log(response.status, event);
 	return response;
 };

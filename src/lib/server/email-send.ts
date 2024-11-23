@@ -1,11 +1,9 @@
 import nodemailer from 'nodemailer';
 import * as aws from '@aws-sdk/client-ses';
 import {
-	FROM_EMAIL,
-	MY_SWA_ACCESS_KEY_ID,
-	MY_SWA_SECRET_ACCESS_KEY,
-	MY_SWA_REGION,
-	MY_SWA_API_VERSION
+	APPLE_USERNAME,
+	APPLE_PASSWORD,
+	FROM_EMAIL
 } from '$env/static/private';
 //import { z } from "zod";
 export default async function sendEmail(
@@ -14,24 +12,17 @@ export default async function sendEmail(
 	bodyHtml?: string,
 	bodyText?: string
 ) {
-	const hasAccessKeys = MY_SWA_ACCESS_KEY_ID && MY_SWA_SECRET_ACCESS_KEY;
-
-	const ses = new aws.SES({
-		apiVersion: MY_SWA_API_VERSION,
-		region: MY_SWA_REGION,
-		...(hasAccessKeys
-			? {
-					credentials: {
-						accessKeyId: MY_SWA_ACCESS_KEY_ID || '',
-						secretAccessKey: MY_SWA_SECRET_ACCESS_KEY || ''
-					}
-				}
-			: {})
-	});
+	const hasAccessKeys = APPLE_USERNAME && APPLE_PASSWORD;
 
 	// create Nodemailer SES transporter
 	const transporter = nodemailer.createTransport({
-		SES: { ses, aws }
+		host: "smtp.mail.me.com",
+		port: 465,
+		secure: true,
+		auth: {
+			user: APPLE_USERNAME,
+			pass: APPLE_PASSWORD,
+		}
 	});
 
 	try {
