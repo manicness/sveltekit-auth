@@ -48,6 +48,11 @@
 					href="/dashboard"
 					class:active={'/dashboard' === currentPage}>Protected</a
 				>
+				<a
+					class="flex items-center text-sm font-medium text-muted-foreground"
+					href="/movies"
+					class:active={'/movies' === currentPage}>Movies</a
+				>
 			</nav>
 		</div>
 		<div class="flex flex-1 items-center justify-end space-x-4">
