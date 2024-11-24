@@ -15,31 +15,14 @@
 <div class="flex-1">
 	<section class="container grid items-center gap-6">
 		<div class="flex max-w-[980px] flex-col items-start gap-2">
-			<h1 class="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-				{APP_NAME}
-			</h1>
+			<h1 class="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">Hello</h1>
 			<p class="max-w-[700px] text-lg text-muted-foreground">
-				This is a sveltekit auth starter. It is an <a
-					href="https://github.com/delay/sveltekit-auth-starter">open source auth starter project</a
-				>
-				utilizing
-				<a href="https://lucia-auth.com/" class="underline">Lucia</a> for authentication,
-				<a href="https://www.shadcn-svelte.com" class="underline">shadcn-svelte</a> for ui elements,
-				<a href="https://orm.drizzle.team/" class="underline">Drizzle</a>
-				for database connectivity and type safety,
-				<a href="https://lucide.dev/" class="underline">Lucide</a>
-				for icons, <a href="https://superforms.rocks/" class="underline">Superforms</a>
-				for working with forms, <a href="https://zod.dev/" class="underline">Zod</a>
-				for typescript schema validation and
-				<a href="https://kit.svelte.dev/" class="underline">Sveltekit</a> for the javascript
-				framework. It has email verification, password reset, and will send an email out if the user
-				changes their email address to re-verify it. It also has a custom logging feature which I
-				wrote in depth on
-				<a
-					href="https://jeffmcmorris.medium.com/awesome-logging-in-sveltekit-6afa29c5892c"
-					class="underline">here</a
-				>. It is released as open source under an MIT license. The source code is available on
-				<a href="https://github.com/delay/sveltekit-auth" class="underline">github</a>.
+				Welcome to My Corner of the Internet! There's something wonderful about having hobbies that
+				bring joy to everyday life. This website is a collection of the things that make my free
+				time special. Here, you'll find a digital diary of my adventures in various hobbies. It's
+				more than just a list of activities – it's a journey through experiences that have made me
+				think, smile, and sometimes see the world a little differently. Feel free to explore and
+				maybe find inspiration for your next hobby!
 			</p>
 		</div>
 		<div class="flex gap-4">

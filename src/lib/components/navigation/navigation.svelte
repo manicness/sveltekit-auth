@@ -46,12 +46,22 @@
 				<a
 					class="flex items-center text-sm font-medium text-muted-foreground"
 					href="/dashboard"
-					class:active={'/dashboard' === currentPage}>Protected</a
+					class:active={'/dashboard' === currentPage}>Private</a
+				>
+				<a
+					class="flex items-center text-sm font-medium text-muted-foreground"
+					href="/photography"
+					class:active={'/photography' === currentPage}>Photography</a
 				>
 				<a
 					class="flex items-center text-sm font-medium text-muted-foreground"
 					href="/movies"
 					class:active={'/movies' === currentPage}>Movies</a
+				>
+				<a
+					class="flex items-center text-sm font-medium text-muted-foreground"
+					href="/drone"
+					class:active={'/drone' === currentPage}>Drone</a
 				>
 			</nav>
 		</div>
